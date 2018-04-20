@@ -9,6 +9,7 @@ html{
   display: flex;
   background-color: black;
   width: 100%;
+
 }
 
 .logo img {
@@ -24,10 +25,16 @@ html{
 
 /* main banner section */
 .main-banner{
-  display: flex;
   height: 25rem;
   width: 100%;
   background-image: url("../img/moto.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.container{
+  margin: 0 auto;
 }
 
 .main-content{
@@ -35,8 +42,9 @@ html{
   background-color: black;
   width: 20rem;
   padding: 2rem 3rem;
-  margin: auto;
   font-weight: bold;
+  position: relative;
+  top: 9rem;
 }
 
 .main-content h2{
@@ -156,15 +164,37 @@ footer {
   }
 }
 
-@media only screen and(max-width: 470px){
+@media only screen and(max-width: 470px),(orientation:portrait){
+  .main-banner{
+    height: 15rem;
+  }
+
   .main-content {
-    margin-bottom: 0;
+    position: relative;
+    top: 10rem;
     padding: 1rem 2rem;
+    width: 100%;
   }
   .main-content h2 {
     font-size: 0.77rem;
   }
   .main-content h1 {
     font-size: 1rem;
+  }
+  #watch {
+    display: none;
+  }
+  .box {
+    width: 90%;
+    margin: auto;
+  }
+  .lh {
+    flex-direction: column;
+  }
+  .box2 {
+    width: 100%;
+  }
+  footer {
+    text-align: center;
   }
 }
